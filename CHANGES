@@ -1,0 +1,77 @@
+Flask Kit Changelog
+===================
+
+Here you can see the Flask Kit evolution.
+
+Version 0.4.1
+-------------
+- Updated dependencies and fixed imports
+- Explicit settings class path from the `PROJECT_SETTINGS` env var
+- Flask-RESTPlus out of the box
+
+
+Version 0.4
+-----------
+- New clean and shiny project structure
+- Multi-apps support
+- Demo blueprints, extended set of pre-installed extensions
+- Templates demo, BEM layout, some good JS-libs inside
+- Flask-Assets for CSS and JS bundles
+- SQLAlchemy is out of the box (real world, bro)
+- Auth demo by Flask-Login extension
+- Deep testing is possible now
+- New versions of everything. Tested together
+- Extended settings
+
+
+Version 0.3.1
+-------------
+- Demo views and templates have been removed. These examples will be in docs
+- Helpers are more clear and clean now
+- `Flask-Testing` extention is the part of Flask Kit
+  You can find simple KitTestCase in the `kit.testing` module. Make love and tests
+- Nose runner is really good. Use it out of the box
+- Database object import in blueprints is fixed
+
+
+Version 0.3
+-----------
+- Huge architectural problem that gave rise to circular imports was fixed.
+  By now you can import and use original app instance everywhere
+- Finally, you can define database object once in the `database` module,
+  import and use it everywhere like the `app` instance
+- Cleaned-up, refactored helpers. By now we have `AppFactory`, `ModulesHelper`
+  and `MainAppHelper` classes that encapsulate useful set of helper methods
+- Django-style context processors registration system
+
+
+Version 0.2.2
+-------------
+- The `manage.py` implementation
+- Management command `shell`. The :class:`Shell` from the Flask-Script package
+  doesn't work with iPython >= 0.12, so there is custom class to work around that
+- Blueprint-by-Templates system implementation
+- New helper :class:`BlueprintPackageFactory`
+- Management command `createblueprint` to quickly build new blueprint packages
+
+
+Version 0.2.1
+-------------
+- The :attr:`APP_MODULE` in settings.py has been renamed to `APP_PACKAGE`
+- The :mod:`app` has been renamed to `application`
+- More clean `AppFactory` class
+
+
+Version 0.2
+-----------
+First big refactoring. Project structure has been frozen.
+
+
+Version 0.1.1
+-------------
+Kit core, project rearranging and some example files
+
+
+Version 0.1
+-----------
+First release, first commit, rather vague project structure

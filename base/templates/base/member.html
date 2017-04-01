@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	{% block main %}
+		{% include 'blocks/content_main.html' %}
+	{% endblock %}
+
+	{% block event %}
+		{% include 'blocks/content_event.html' %}
+	{% endblock %}
+
+	{% block footer %}
+		{% include 'blocks/footer.html' %}
+	{% endblock %}
+{% endblock %}

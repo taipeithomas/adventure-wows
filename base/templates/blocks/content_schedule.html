@@ -1,0 +1,35 @@
+{% block schedule %}
+<!-- Header -->
+
+	<div class="container">
+		<header class="major">
+			<h2>{{s.title}}</h2>
+		</header>		
+	</div>
+	<div class="container" style="text-align:left;vertical-align: bottom;">
+	
+				<div class="col-xs-6">
+					活動時間：{{s.start.date()}}~{{s.end.date()}}
+				</div>
+				<div class="col-xs-6" style="text-align:right;">
+					<a href="#register">立即報名</a> | <a href="/">回到首頁</a>
+				</div>
+	</div>
+	<!-- Photo -->
+
+	<div class="container">
+		<img src='/static/img/schedule01.png' width=100% height=100%>
+	</div>
+	<!-- Notification -->
+	<br>
+	
+	<div class="container">
+		<header class="major" style="text-align:left;font-size:1.4em;text-decoration: underline;">注意事項</header>
+		<div class="text" style="text-align:left;font-size:0.9em;">
+		<span class="byline" style="font-weight: bold;">※ 很重要，請參加的朋友，「耐心協助」以下本活動所需的各項報名資料填寫。</span><br>
+		{{e.notification}}
+		</div>	
+		
+	</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+
+{% block main %}
+<!-- Header -->
+<div id="header">
+	<div class="container">
+		<!-- Logo -->
+		<h1><a href="#" id="logo">{{ refs[0] }}<Br>{{ refs[1] }}</a></h1>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				{% for event in promotes %}
+				<li><a href="/event?id={{event.id}}">{{event.title}}</a></li>
+				{% endfor %}
+				<li>
+					<a href="#">立即啟程</a>
+					<ul>
+						{% for schedule in activates %}
+						<li><a href="/schedule?id={{schedule.id}}">{{schedule.title}}</a></li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="">我們是</a>
+					<ul>
+						<li><a href="{{ refs[2][0] }}">{{ refs[2][1] }}</a></li>
+						<li><a href="{{ refs[3][0] }}">{{ refs[3][1] }}</a></li>
+						<li><a href="{{ refs[4][0] }}">{{ refs[4][1] }}</a></li>
+						<li><a href="{{ refs[5][0] }}">{{ refs[5][1] }}</a></li>
+						<li><a href="{{ refs[6][0] }}">{{ refs[6][1] }}</a></li>
+						<li><a href="{{ refs[7][0] }}">{{ refs[7][1] }}</a></li>
+						<li><a href="{{ refs[8][0] }}">{{ refs[8][1] }}</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- Banner -->
+		<div id="banner">
+			<div class="container">
+				<section>
+					<header class="major">
+						<h2>{{ refs[9][0] }}</h2>
+						<span class="byline">&hellip; {{ refs[9][1] }}</span>
+					</header>
+					<a href="{{ refs[8][0] }}" class="button alt">立即加入</a>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

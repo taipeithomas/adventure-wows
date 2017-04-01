@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="wrapper style2">
+	
+	{% block main %}
+		{% include 'blocks/content_schedule.html' %}
+	{% endblock %}
+	
+	{% block risk %}
+		{% include 'blocks/content_risk.html' %}
+	{% endblock %}	
+	
+	{% block refund %}
+		{% include 'blocks/content_refund.html' %}
+	{% endblock %}	
+</div>
+
+<div class="wrapper style1">
+	{% block form %}
+		{% include 'blocks/content_form.html' %}
+	{% endblock %}
+</div>
+
+	{% block footer %}
+		{% include 'blocks/footer.html' %}
+	{% endblock %}
+{% endblock %}

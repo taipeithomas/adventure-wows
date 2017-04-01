@@ -1,0 +1,21 @@
+{% block event %}
+<!-- Featured -->
+<div class="wrapper style2">
+	<section class="container">
+		<header class="major">
+			<h2>{{ refs[10][0] }}</h2>
+			<span class="byline">{{ refs[10][1] }}</span>
+		</header>
+		<div class="row no-collapse-1">
+				
+				{% for event in promotes %}
+				<section class="3u">
+					<a href="/event?id={{event.id}}" class="image feature">
+					<img src="/static/{{event.photo}}" alt=""></a>
+					<p>{{event.title}}<br>{{event.description}}</p>
+				</section>
+				{% endfor %}
+		</div>
+	</section>
+</div>
+{% endblock %}

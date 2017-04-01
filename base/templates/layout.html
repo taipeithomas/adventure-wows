@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ site_title }}</title>
+	{% block js %}
+		{% assets "js_base" %}
+			<script src="{{ ASSET_URL }}" type="text/javascript"></script>
+		{% endassets %}
+	{% endblock %}
+    
+	{% block css %}
+		{% assets "css_base" %}
+			<link rel="stylesheet" href="{{ ASSET_URL }}">
+		{% endassets %}
+	{% endblock %}
+
+</head>
+
+<body>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
